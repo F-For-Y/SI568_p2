@@ -1,0 +1,75 @@
+/* 设置基本样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    max-width: 500px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.chat-display {
+    padding: 10px;
+    background-color: #f9f9f9;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    padding: 5px 10px;
+    background-color: #428bca;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 现有的基本样式保持不变 */
+/* 修改后的消息样式 */
+.message {
+    color: 'black';
+    padding: '5px 10px';
+    margin-bottom: '10px';
+    word-wrap: break-word; /* 允许长单词或超长文本自动换行 */
+}
+
+.message:nth-child(odd) {
+    float: left;
+    width: 50%;
+    background-color: grey; /* 或者您想要的任何颜色 */
+    border-radius: 10px;
+}
+
+.message:nth-child(even) {
+    float: right;
+    width: 50%;
+    background-color: #428bca; /* 为第二个消息选择一个不同的颜色 */
+    border-radius: 10px;
+}
+
+/* 清除float影响 */
+.chat-display:after {
+    content: "";
+    display: table;
+    clear: both;
+}
